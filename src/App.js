@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from "react-bootstrap"
 import NavBar from "./component/NavBar.jsx"
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
+import {HashRouter as Router, Route, Routes} from "react-router-dom"
 import {useState} from "react"
 import Home from "./pages/Home.jsx"
 import ShoppingCart from "./pages/ShoppingCart.jsx"
