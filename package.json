@@ -2,7 +2,7 @@
   "name": "shop-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Gonzalo-Erceg.github.io/shop-page",
+  "homepage": "http://Gonzalo-Erceg.github.io/Shop-page",
   "dependencies": {
     "@snowpak/react-credit-cards": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.1",
