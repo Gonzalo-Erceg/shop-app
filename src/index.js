@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux"
 import {Provider} from "react-redux"
 import "./index.css"
+import {HashRouter} from "react-router-dom"
 const reducer= (state = [], action)=>{
   switch (action.type) {
     case "add":
@@ -29,9 +30,12 @@ const store = createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+  <HashRouter>
+  <Provider store={store}>
       <App />
     </Provider>
+  </HashRouter>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
