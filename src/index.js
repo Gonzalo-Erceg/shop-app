@@ -17,6 +17,9 @@ const reducer= (state = [], action)=>{
         return state.filter((data,index) => index !== action.content)
       break;
     default:
+      case"restart":
+        return []
+      break;
       return state
       break;
   }

@@ -3,16 +3,18 @@ import '@snowpak/react-credit-cards/es/styles-compiled.css'
 import {Form,Container,Col,Row,Button,Modal} from "react-bootstrap"
 import {useState} from "react"
 import {Navigate, useNavigate} from "react-router-dom"
-
+import {useDispatch} from "react-redux"
 function Confirmacion(){
+    const dispach =useDispatch()
     const navegacion = useNavigate()
     const [show, setShow] = useState(false);
 
     const handleClose = () =>{
+        dispach({type:"restart"})
         navegacion("/",{replace:true})
     };
     const handleShow = () => setShow(true);
-  
+    
     return (
       <>
         <Button variant="primary" onClick={handleShow} style={{width:"100%"}} className="mt-5" >
