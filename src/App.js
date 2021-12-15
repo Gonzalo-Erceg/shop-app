@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from "react-bootstrap"
 import NavBar from "./component/NavBar.jsx"
-import {HashRouter as Router, Route, Routes} from "react-router-dom"
+import { Route, Routes} from "react-router-dom"
 import {useState} from "react"
 import Home from "./pages/Home.jsx"
 import ShoppingCart from "./pages/ShoppingCart.jsx"
@@ -13,7 +13,7 @@ function App() {
   const [total, setTotal] = useState(0)
   const [isLogin, setIsLogin] = useState({login:false})
   return (
-    <Router>
+    <>
       <Row>
         <Col><NavBar islogin={isLogin} setislogin={setIsLogin}/></Col>
       </Row>
@@ -32,7 +32,7 @@ function App() {
       <Row className="align-items-end" style={{marginTop:"200px"}}>
         <Col style={{position:"fixed", bottom:"0"}}><Footer/></Col>
       </Row>
-    </Router>
+    </>
     
   );
 }

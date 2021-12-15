@@ -30,11 +30,14 @@ const store = createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
-  <HashRouter>
+  
   <Provider store={store}>
-      <App />
-    </Provider>
+  <HashRouter>
+    <App />
   </HashRouter>
+      
+    </Provider>
+  
     
   </React.StrictMode>,
   document.getElementById('root')
