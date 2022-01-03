@@ -17,9 +17,9 @@ function App() {
       <Row>
         <Col><NavBar islogin={isLogin} setislogin={setIsLogin}/></Col>
       </Row>
-     <Row>
+     <Row style={{marginBottom:"200px"}} >
        <Col>
-          <Routes>
+        <Routes>
         <Route path="/" element={<Home total={setTotal}/>}/>
         <Route path="/productos/:product" element={<Products total={setTotal}/>}/>
         <Route path="/ShoppingCart" element={<ShoppingCart total={total} setTotal={setTotal} islogin={isLogin}/>}/>
@@ -29,9 +29,9 @@ function App() {
       </Routes>
        </Col>
      </Row>
-      <Row className="align-items-end" style={{marginTop:"200px"}}>
-        <Col style={{position:"fixed", bottom:"0"}}><Footer/></Col>
-      </Row>
+      
+        <Footer/>
+      
     </>
     
   );
